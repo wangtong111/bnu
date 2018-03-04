@@ -1,0 +1,48 @@
+{
+    "project_type": "javascript",
+
+    "debugMode" : 0,
+    "showFPS" : false,
+    "frameRate" : 60,
+    "noCache" : true,
+    "id" : "gameCanvas",
+    "renderMode" : 0,
+    "engineDir":"frameworks/cocos2d-html5",
+
+    "modules" : ["cocos2d","extensions"],
+
+    "jsList" : [
+        "src/resource.js",
+        "src/WaittingLayer.js",
+        "src/HttpRequest.js",
+        "src/LogData.js",
+        "src/UserDataMgr.js",
+        "src/MarketTips.js",
+        "src/MarketSelect.js",
+        "src/GameConfig.js",
+        "src/InfoTips.js",
+        "src/LobbyScene.js",
+        "src/RoomScene.js",
+        "src/PlayScene.js",
+        "src/PlayLayerBase.js",
+        "src/PlayLayer11.js",
+        "src/PlayLayer12.js",
+        "src/PlayLayer13.js",
+        "src/PlayLayer14.js",
+        "src/PlayLayer21.js",
+        "src/PlayLayer22.js",
+        "src/PlayLayer23.js",
+        "src/PlayLayer31.js",
+        "src/PlayLayer32.js",
+        "src/PlayLayer33.js",
+        "src/PlayLayer41.js",
+        "src/PlayLayer42.js",
+        "src/PlayLayer51.js",
+        "src/PlayLayer61.js",
+        "src/PlayLayer62.js",
+        "src/LogoTipsLayer.js",
+        "src/CompleteTips.js"
+
+
+    ]
+}
