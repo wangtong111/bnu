@@ -1,6 +1,6 @@
 var PlayLayer21 = PlayLayerBase.extend({
 
-    animalTalk : ["第1小关"],
+    animalTalk : ["在行为主义的时代，很多研究都是用老鼠和\n迷宫完成的。在你面前的就是一个迷宫。\n为了让小老鼠学会走迷宫，\n你需要把哪些东西放在迷宫的\n入口和出口？"],
 
     onEnter:function () {
         var self = this;

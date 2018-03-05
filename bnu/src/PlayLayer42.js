@@ -1,6 +1,7 @@
 var PlayLayer42 = PlayLayerBase.extend({
 
-    animalTalk : ["第1小关","第2小关"],
+    animalTalk : ["每当临近投喂的时间，\n这只鸽子就会跳起一支特殊的舞蹈。\n请你猜猜在食物刚开始呈现的\n时候鸽子最可能在干什么？\n请把相应的鸽子拖进左侧的笼中。",
+                  "研究者取消了对刚才那\n只鸽子的定时食物投喂。\n过了一小段时间，\n当再次观察装置里面时，\n鸽子最可能在干什么？\n请把相应的鸽子拖到装置中吧。"],
 
     onEnter:function () {
         var self = this;
