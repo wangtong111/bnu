@@ -160,6 +160,9 @@ var PlayLayer41 = PlayLayerBase.extend({
         game4_1_3.setScale(1.5,1.5);
         self._content.addChild(game4_1_3);
 
+
+        var strs = ["15秒的时间间隔到了","这只鸽子刚好在跳舞","这只鸽子刚好啄了一下按钮"]
+
         var market4_1_1 = new cc.Sprite(res.market4_1_1);
         market4_1_1.setPosition(-337,57);
         self._content.addChild(market4_1_1);

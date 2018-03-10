@@ -24,6 +24,7 @@ var PlayLayer42 = PlayLayerBase.extend({
                 return;
             }
         }
+        self.completeRoom = true;
         self.hasGoods = true;
         self.addNextStep();
     },

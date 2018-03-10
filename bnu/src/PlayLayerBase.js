@@ -8,7 +8,8 @@ var PlayLayerBase = cc.Layer.extend({
     responseArr : [],
     res :[],
     movePosArr : [],
-    hasGoods : false
+    hasGoods : false,
+    completeRoom : false, 
 
 
     addListeners : function(points){
@@ -297,22 +298,17 @@ var PlayLayerBase = cc.Layer.extend({
             hideWaitting();
             if (cbData != null && cbData["code"] == 1) {
                 LogData.clean();
-
+                this.updateLevs();
                 if (result == true) {
-                    var flagConfig = FLAG_CONFIG[self.types];
-
-
-
-                    this.updateLevs();
                     var layer = new CompleteTips();
-                    if(flagConfig.length <= self.lev){
+                    if(this.completeRoom == true){
                         layer.setData(4);
                         layer.setContent("恭喜你，成功完成本篇文献的全部关卡！\n")
                     }else{
                         layer.setData(1);
                         layer.setContent("恭喜你,解锁下一关！\n")
                     }
-        
+                    
                     this.addChild(layer, 100);
                     return;
                 }
