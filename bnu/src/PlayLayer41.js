@@ -7,7 +7,7 @@ var PlayLayer41 = PlayLayerBase.extend({
     onEnter:function () {
         var self = this;
         self._super();
-
+        self.hasGoods = false;
         var selectGoods = UserDataMgr.getSelectGoods();
 
         if(selectGoods.length != 9){
@@ -16,12 +16,15 @@ var PlayLayer41 = PlayLayerBase.extend({
             })));
             return;
         }
-
+        self.hasGoods = true;
         self.addNextStep();
     },
 
     checkGame : function(){
         var self = this;
+        if(self.hasGoods == false){
+            return false;
+        }
 
         if (self.now_step === 0){
             if(self.res[0].length === 1 && self.res[0][0] === 3){
@@ -156,6 +159,9 @@ var PlayLayer41 = PlayLayerBase.extend({
         game4_1_3.setPosition(379,0);
         game4_1_3.setScale(1.5,1.5);
         self._content.addChild(game4_1_3);
+
+
+        var strs = ["15秒的时间间隔到了","这只鸽子刚好在跳舞","这只鸽子刚好啄了一下按钮"]
 
         var market4_1_1 = new cc.Sprite(res.market4_1_1);
         market4_1_1.setPosition(-337,57);

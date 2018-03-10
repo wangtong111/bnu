@@ -8,6 +8,8 @@ var PlayLayerBase = cc.Layer.extend({
     responseArr : [],
     res :[],
     movePosArr : [],
+    hasGoods : false,
+    completeRoom : false, 
 
 
     addListeners : function(points){
@@ -30,7 +32,7 @@ var PlayLayerBase = cc.Layer.extend({
 
         var startTime = this.nowTime;
         var nowTime = Date.parse(new Date());
-        if((nowTime - startTime)/1000 <= 10){
+        if((nowTime - startTime)/1000 <= 1){
             alert("至少阅读10秒，请仔细看下线索哦。");
             return ;
 
@@ -51,7 +53,7 @@ var PlayLayerBase = cc.Layer.extend({
         var self = this;
 
         if(self.canTouch() == false){
-            return
+            return false;
         }
 
         var target = event.getCurrentTarget();
@@ -253,11 +255,10 @@ var PlayLayerBase = cc.Layer.extend({
 
     checkGame : function(){
 
-        return false;
     },
 
     addNextStep : function () {
-
+       
     },
 
     checkNextStep : function () {
@@ -297,12 +298,17 @@ var PlayLayerBase = cc.Layer.extend({
             hideWaitting();
             if (cbData != null && cbData["code"] == 1) {
                 LogData.clean();
-
+                this.updateLevs();
                 if (result == true) {
-                    this.updateLevs();
                     var layer = new CompleteTips();
-                    layer.setData(1);
-                    layer.setContent("恭喜你,解锁下一关！\n")
+                    if(this.completeRoom == true){
+                        layer.setData(4);
+                        layer.setContent("恭喜你，成功完成本篇文献的全部关卡！\n")
+                    }else{
+                        layer.setData(1);
+                        layer.setContent("恭喜你,解锁下一关！\n")
+                    }
+                    
                     this.addChild(layer, 100);
                     return;
                 }

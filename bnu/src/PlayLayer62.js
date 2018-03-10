@@ -7,7 +7,7 @@ var PlayLayer62 = PlayLayerBase.extend({
     onEnter:function () {
         var self = this;
         self._super();
-
+        self.hasGoods = false;
         var selectGoods = UserDataMgr.getSelectGoods();
 
         if(selectGoods.length != 6){
@@ -25,13 +25,17 @@ var PlayLayer62 = PlayLayerBase.extend({
                 return;
             }
         }
-
-
+        self.completeRoom = true;
+        self.hasGoods = true;
         self.addNextStep();
     },
 
     checkGame : function(){
         var self = this;
+        if(self.hasGoods == false){
+            return false;
+        }
+
 
         if (self.now_step === 0){
             if(self.res[0].length === 1 && self.res[0][0] === 1){

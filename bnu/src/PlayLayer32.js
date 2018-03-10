@@ -8,7 +8,7 @@ var PlayLayer32 = PlayLayerBase.extend({
     onEnter:function () {
         var self = this;
         self._super();
-
+        self.hasGoods = false;
         var selectGoods = UserDataMgr.getSelectGoods();
 
         if(selectGoods.length !== 1){
@@ -26,12 +26,15 @@ var PlayLayer32 = PlayLayerBase.extend({
                 return;
             }
         }
-
+        self.hasGoods = true;
         self.addNextStep();
     },
 
     checkGame : function(){
         var self = this;
+        if(self.hasGoods == false){
+            return false;
+        }
 
         if (self.now_step === 0){
             if(self.res[2].length === 1){

@@ -4,12 +4,12 @@ var PlayLayer51 = PlayLayerBase.extend({
                   "趁小婴儿不注意，\n研究者在小婴儿背后用锤子猛击铁条，\n发出了巨大的噪声。\n你认为小婴儿会作何反应？\n请把相应的反应拖放到小婴儿的脸上吧。",
                   "正式的实验开始了。\n在小阿尔伯特的实验中，\n研究者是怎么设置、\n呈现实验材料的？\n请把正确的事物拖放到相应的位置吧。",
                   "刚才的实验情境被研究者重复了多次。\n现在，铁条被敲击的噪音不再被呈现。\n当面对小老鼠时，\n婴儿更可能会作何反应？\n请把相应的反应拖放到婴儿的脸上吧。",
-                  "最后，研究者还像探讨泛化的问题。\n呈现给小婴儿的事物被换成了\n和老鼠很像的小兔子，\n这时小婴儿的反应会是什么？\n请把正确的反应拖放到小婴儿的脸上吧。"],
+                  "最后，研究者还想探讨泛化的问题。\n呈现给小婴儿的事物被换成了\n和老鼠很像的小兔子，\n这时小婴儿的反应会是什么？\n请把正确的反应拖放到小婴儿的脸上吧。"],
 
     onEnter:function () {
         var self = this;
         self._super();
-
+        self.hasGoods = false;
         var selectGoods = UserDataMgr.getSelectGoods();
 
         if(selectGoods.length !== 7){
@@ -27,12 +27,16 @@ var PlayLayer51 = PlayLayerBase.extend({
                 return;
             }
         }
-
+        self.completeRoom = true;
+        self.hasGoods = true;
         self.addNextStep();
     },
 
     checkGame : function(){
         var self = this;
+        if(self.hasGoods == false){
+            return false;
+        }
 
         if (self.now_step === 0){
             if(self.res[0].length === 1 && self.res[0][0] === 1){

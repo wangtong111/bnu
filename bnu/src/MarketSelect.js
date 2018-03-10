@@ -76,7 +76,7 @@ var MarketSelect = cc.Layer.extend({
             self.removeFromParent(true);
 
             var layer = null;
-            if(self.types === 1){
+            if(self.types === 5){
                 if (self.lev === 1)
                     layer = new PlayLayer11();
                 else if( self.lev === 2)
@@ -85,7 +85,7 @@ var MarketSelect = cc.Layer.extend({
                     layer = new PlayLayer13();
                 else if( self.lev === 4)
                     layer = new PlayLayer14();
-            }else if(self.types === 2){
+            }else if(self.types === 4){
                 if(self.lev === 1){
                     layer = new PlayLayer21();
                 }else if(self.lev  === 2){
@@ -94,7 +94,7 @@ var MarketSelect = cc.Layer.extend({
                     layer = new PlayLayer23();
                 }
 
-            }else if(self.types === 3){
+            }else if(self.types === 6){
                 if(self.lev === 1){
                     layer = new PlayLayer31();
                 }else if(self.lev === 2){
@@ -102,17 +102,17 @@ var MarketSelect = cc.Layer.extend({
                 }else if(self.lev === 3){
                     layer = new PlayLayer33();
                 }
-            }else if(self.types === 4){
+            }else if(self.types === 2){
                 if(self.lev === 1){
                     layer = new PlayLayer41();
                 }else if(self.lev === 2) {
                     layer = new PlayLayer42();
                 }
-            }else if(self.types === 5){
+            }else if(self.types === 1){
                 if(self.lev === 1){
                     layer = new PlayLayer51();
                 }
-            }else if(self.types === 6){
+            }else if(self.types === 3){
                 if(self.lev === 1){
                     layer = new PlayLayer61();
                 }else if(self.lev === 2){
