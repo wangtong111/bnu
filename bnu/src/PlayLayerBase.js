@@ -298,8 +298,9 @@ var PlayLayerBase = cc.Layer.extend({
             hideWaitting();
             if (cbData != null && cbData["code"] == 1) {
                 LogData.clean();
-                this.updateLevs();
+                
                 if (result == true) {
+                    this.updateLevs();
                     var layer = new CompleteTips();
                     if(this.completeRoom == true){
                         layer.setData(4);

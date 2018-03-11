@@ -128,7 +128,7 @@ var PlayLayer23 = PlayLayerBase.extend({
         game2_3_2.setScale(1.5,1.5);
         self._content.addChild(game2_3_2);
 
-        var market2_2_2 = new cc.Sprite(res.market2_2_2);
+        var market2_2_2 = new cc.Sprite(res.market2_2_9);
         market2_2_2.setPosition(-107,-112);
         self._content.addChild(market2_2_2);
 

@@ -110,6 +110,7 @@ var PlayLayer31 = PlayLayerBase.extend({
         self._content.addChild(game3_1_1);
 
         var market3_1_1 = new cc.Sprite(res.market3_1_1);
+        market3_1_1.setScale(-1,1)
         market3_1_1.setPosition(-15,-32);
         self._content.addChild(market3_1_1);
 
@@ -134,6 +135,7 @@ var PlayLayer31 = PlayLayerBase.extend({
         self._content.addChild(game3_1_1);
 
         var market3_1_1 = new cc.Sprite(res.market3_1_1);
+        market3_1_1.setScale(-1,1)
         market3_1_1.setPosition(-12,-40);
         self._content.addChild(market3_1_1);
 
@@ -169,11 +171,12 @@ var PlayLayer31 = PlayLayerBase.extend({
         game3_1_1.setPosition(-122,5);
         self._content.addChild(game3_1_1);
 
-        var market3_1_6 = new cc.Sprite(res.market3_1_6);
+        var market3_1_6 = new cc.Sprite(res.market3_1_2);
         market3_1_6.setPosition(-224,-31);
         self._content.addChild(market3_1_6);
 
         var market3_1_1 = new cc.Sprite(res.market3_1_1);
+        market3_1_1.setScale(-1,1)
         market3_1_1.setPosition(-12,-40);
         self._content.addChild(market3_1_1);
 

@@ -42,7 +42,7 @@ var PlayLayer12 = PlayLayerBase.extend({
 
         }else if(self.now_step === 1){
             if(self.res[0].length === 1 && self.res[1].length === 1){
-                if(self.res[0][0] === 4 && self.res[1][0] === 1){
+                if((self.res[0][0] === 4 || self.res[0][0] === 1 ) && (self.res[1][0] === 1 || self.res[1][0] === 4 )){
                     return true;
                 }
             }

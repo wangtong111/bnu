@@ -89,6 +89,14 @@ var PlayLayer61 = PlayLayerBase.extend({
             self.addListeners(m);
         }
 
+        var strs = ["一般能力测试","未来学业成就测试"];
+        for(var i = 0;i<2;i++){
+            var content = new cc.LabelTTF(strs[i],"Arial",20);
+            content.setColor(cc.color(0,0,0,255));
+            content.setPosition(162 + i*218,-165);
+            self._content.addChild(content);
+        }
+
         var game6_1_1 = new cc.Sprite(res.game6_1_1);
         game6_1_1.setPosition(-223,0);
         self._content.addChild(game6_1_1);
@@ -131,6 +139,14 @@ var PlayLayer61 = PlayLayerBase.extend({
             m.setScale(1.5,1.5);
             self._content.addChild(m,1,1+i);
             self.addListeners(m);
+        }
+
+        var strs = ["随机选中学生的名单","按得分选中学生的名单"];
+        for(var i = 0;i<2;i++){
+            var content = new cc.LabelTTF(strs[i],"Arial",20);
+            content.setColor(cc.color(0,0,0,255));
+            content.setPosition(302,21 - 265*i);
+            self._content.addChild(content);
         }
 
         var game6_1_2_2 = new cc.Sprite(res.game6_1_2_2);

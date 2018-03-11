@@ -107,6 +107,14 @@ var PlayLayer62 = PlayLayerBase.extend({
             self.addListeners(m);
         }
 
+        var strs = ["一般能力测试","未来学业成就测试"];
+        for(var i = 0;i<2;i++){
+            var content = new cc.LabelTTF(strs[i],"Arial",20);
+            content.setColor(cc.color(0,0,0,255));
+            content.setPosition(162 + i*218,-165);
+            self._content.addChild(content);
+        }
+
         var game6_1_1 = new cc.Sprite(res.game6_1_1);
         game6_1_1.setPosition(-223,0);
         self._content.addChild(game6_1_1);

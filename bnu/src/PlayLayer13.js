@@ -1,7 +1,7 @@
 var PlayLayer13 = PlayLayerBase.extend({
 
     animalTalk : ["照例，我们先来拍摄一段\n小汽车在乡间公路行驶的视频吧。\n请把应该出现在视频中的\n物品拖放到相应的位置吧。",
-                  "看过视频后，被试需要完成一份问卷。\n问卷中的关键问题时什么？\n请你补全关键问题的内容。",
+                  "看过视频后，被试需要完成一份问卷。\n问卷中的关键问题是什么？\n请你补全关键问题的内容。",
                   "除了刚才的问卷，\n被试们还需要填写另一份问卷。\n请你帮助被试安排实验的时间，\n同时补全问卷的内容吧。",
                   "在视频后的问卷中，\n一份问卷使用了轿车经过\n谷仓的错误假设。\n在回忆谷仓时，\n哪一组的被试更容易产生\n见到谷仓的错误记忆呢？\n请把谷仓拖放到相应的错误假设下。"],
 
@@ -31,8 +31,8 @@ var PlayLayer13 = PlayLayerBase.extend({
 
 
         if (self.now_step === 0){
-            if(self.res[0].length === 1 && self.res[1].length === 0){
-                if(self.res[0][0] === 3){
+            if(self.res[0].length + self.res[1].length === 1){
+                if(self.res[0][0] === 3 || self.res[1][0] === 3){
                     return true;
                 }
             }
@@ -175,8 +175,8 @@ var PlayLayer13 = PlayLayerBase.extend({
         game1_3_3.setScale(1.5,1.5);
         self._content.addChild(game1_3_3);
 
-        var name = [res.market1_2_6,res.market1_2_7,res.market1_2_8,res.market1_3_5,res.market1_3_9];
-        for(var i = 0 ; i < 4 ;i++){
+        var name = [res.market1_2_6,res.market1_2_7,res.market1_2_8,res.market1_3_5,res.market1_3_9,res.market1_3_9];
+        for(var i = 0 ; i < 5 ;i++){
             self.movePosArr.push(cc.p(315,192 - i*75));
 
             var m = new cc.Sprite(name[i]);

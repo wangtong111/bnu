@@ -57,8 +57,8 @@ var PlayLayer22 = PlayLayerBase.extend({
 
 
         }else if(self.now_step === 2){
-            if(self.res[0].length === 1 && self.res[1].length === 1 && self.res[2].length === 1  ){
-                if(self.res[0][0] === 5 && self.res[1][0] === 3 && self.res[2][0] === 1){
+            if(self.res[1].length === 1 && self.res[3].length === 1 && self.res[4].length === 1  ){
+                if(self.res[1][0] === 5 && self.res[3][0] === 3 && self.res[4][0] === 1){
                     return true;
                 }
             }
@@ -67,7 +67,7 @@ var PlayLayer22 = PlayLayerBase.extend({
 
         }else if(self.now_step === 3){
             if(self.res[0].length === 1 && self.res[1].length === 1 && self.res[2].length === 1  ){
-                if(self.res[0][0] === 4 && self.res[1][0] === 3 && self.res[2][0] === 5){
+                if( (self.res[0][0] === 4 || self.res[0][0] === 3 ) && (self.res[1][0] === 3 || self.res[1][0] === 4 )&& self.res[2][0] === 5){
                     return true;
                 }
             }
@@ -76,7 +76,7 @@ var PlayLayer22 = PlayLayerBase.extend({
 
         }else if(self.now_step === 4){
             if(self.res[0].length === 1 && self.res[1].length === 1){
-                if(self.res[0][0] === 1 && self.res[1][0] === 2){
+                if( (self.res[0][0] === 1 || self.res[0][0] === 2) && (self.res[1][0] === 2 || self.res[1][0] === 1 )){
                     return true;
                 }
             }
@@ -137,7 +137,7 @@ var PlayLayer22 = PlayLayerBase.extend({
         game2_2_1_2.setPosition(158,26);
         self._content.addChild(game2_2_1_2);
 
-        var name = [res.market2_2_3,res.market2_2_6,res.market2_2_9,res.market2_2_4];
+        var name = [res.market2_2_3,res.market2_2_2,res.market2_2_9,res.market2_2_4];
 
         for(var i = 0; i < 4; i++){
             var m = new cc.Sprite(name[i]);
@@ -167,7 +167,7 @@ var PlayLayer22 = PlayLayerBase.extend({
 
         self.responseArr = [];
         self.movePosArr = [cc.p(422,238),cc.p(424,89),cc.p(434,-68),cc.p(435,-204),cc.p(284,-204),cc.p(168,-202)];
-        self.res = [[],[],[]];
+        self.res = [[],[],[],[],[]];
 
         var game2_2_1_1 = new cc.Sprite(res.game2_2_1_1);
         game2_2_1_1.setPosition(-280,0);
@@ -181,7 +181,7 @@ var PlayLayer22 = PlayLayerBase.extend({
         game2_2_3.setPosition(27,-197);
         self._content.addChild(game2_2_3);
 
-        var name = [res.market2_2_3,res.market2_2_6,res.market2_2_9,res.market2_2_4,res.market2_1_7,res.market2_2_1];
+        var name = [res.market2_2_3,res.market2_2_2,res.market2_2_9,res.market2_2_4,res.market2_1_7,res.market2_2_1];
         for(var i = 0; i < 6; i++){
             var m = new cc.Sprite(name[i]);
             m.setPosition(self.movePosArr[i]);
@@ -189,9 +189,9 @@ var PlayLayer22 = PlayLayerBase.extend({
             self.addListeners(m);
         }
 
-        var f = [cc.p(-296,118),cc.p(68,-80),cc.p(251,-78)];
+        var f = [cc.p(-420,118),cc.p(-296,118),cc.p(-162,118),cc.p(68,-80),cc.p(251,-78)];
 
-        for(var i = 0 ; i < 3; i++){
+        for(var i = 0 ; i < 5; i++){
             var r1 = new cc.LayerColor(cc.color(196,200,235,125),100,100);
             r1.setAnchorPoint(0.5,0.5);
             r1.ignoreAnchorPointForPosition(false);
@@ -304,11 +304,11 @@ var PlayLayer22 = PlayLayerBase.extend({
         market2_2_3.setPosition(-162,221);
         self._content.addChild(market2_2_3);
 
-        var market2_2_2 = new cc.Sprite(res.market2_2_2);
+        var market2_2_2 = new cc.Sprite(res.market2_2_9);
         market2_2_2.setPosition(35,-231);
         self._content.addChild(market2_2_2);
 
-        market2_2_2 = new cc.Sprite(res.market2_2_2);
+        market2_2_2 = new cc.Sprite(res.market2_2_4);
         market2_2_2.setPosition(-183,-228);
         self._content.addChild(market2_2_2);
 

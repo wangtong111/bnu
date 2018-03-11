@@ -180,11 +180,11 @@ var PlayLayer11 = PlayLayerBase.extend({
 
 
         var game1_1_3_1 = new cc.Sprite(res.game1_1_3_1);
-        game1_1_3_1.setPosition(167,42);
+        game1_1_3_1.setPosition(-190,42);
         self._content.addChild(game1_1_3_1);
 
         var game1_1_3_2 = new cc.Sprite(res.game1_1_3_2);
-        game1_1_3_2.setPosition(-190,42);
+        game1_1_3_2.setPosition(167,42);
         self._content.addChild(game1_1_3_2);
 
         var market_1_5 = new cc.Sprite(res.market1_1_5);
