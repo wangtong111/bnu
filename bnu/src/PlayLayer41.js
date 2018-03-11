@@ -161,7 +161,13 @@ var PlayLayer41 = PlayLayerBase.extend({
         self._content.addChild(game4_1_3);
 
 
-        var strs = ["15秒的时间间隔到了","这只鸽子刚好在跳舞","这只鸽子刚好啄了一下按钮"]
+        var strs = ["15秒的时间间隔到了","这只鸽子刚好在跳舞","这只鸽子刚好啄了一下按钮"];
+        for(var i = 0;i<3;i++){
+            var content = new cc.LabelTTF(strs[i],"Arial",40);
+            content.setColor(cc.color(0,0,0,255));
+            content.setPosition(-359 + i*369,-220);
+            self._content.addChild(content);
+        }
 
         var market4_1_1 = new cc.Sprite(res.market4_1_1);
         market4_1_1.setPosition(-337,57);
