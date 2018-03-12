@@ -32,7 +32,7 @@ var PlayLayerBase = cc.Layer.extend({
 
         var startTime = this.nowTime;
         var nowTime = Date.parse(new Date());
-        if((nowTime - startTime)/1000 <= 1){
+        if((nowTime - startTime)/1000 <= 10){
             alert("至少阅读10秒，请仔细看下线索哦。");
             return ;
 
