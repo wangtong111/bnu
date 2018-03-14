@@ -304,11 +304,11 @@ var PlayLayer22 = PlayLayerBase.extend({
         market2_2_3.setPosition(-162,221);
         self._content.addChild(market2_2_3);
 
-        var market2_2_2 = new cc.Sprite(res.market2_2_9);
+        var market2_2_2 = new cc.Sprite(res.market2_2_4);
         market2_2_2.setPosition(35,-231);
         self._content.addChild(market2_2_2);
 
-        market2_2_2 = new cc.Sprite(res.market2_2_4);
+        market2_2_2 = new cc.Sprite(res.market2_2_9);
         market2_2_2.setPosition(-183,-228);
         self._content.addChild(market2_2_2);
 

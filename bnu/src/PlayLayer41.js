@@ -186,11 +186,11 @@ var PlayLayer41 = PlayLayerBase.extend({
         self._content.addChild(market4_1_6);
 
         market4_1_6 = new cc.Sprite(res.market4_1_6);
-        market4_1_6.setPosition(429,-41);
+        market4_1_6.setPosition(429,-65);
         self._content.addChild(market4_1_6);
 
         var market4_1_8 = new cc.Sprite(res.market4_1_8);
-        market4_1_8.setPosition(62,-64);
+        market4_1_8.setPosition(62,-65);
         self._content.addChild(market4_1_8);
 
 
